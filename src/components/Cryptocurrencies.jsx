@@ -3,7 +3,7 @@ import millify from 'millify';
 import { Link } from 'react-router-dom';
 import { Card, Row, Col, Input } from 'antd';
 import Loader from './Loader';
-import { Offline, Online } from "react-detect-offline";
+// import { Offline, Online } from "react-detect-offline";
 
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
@@ -18,7 +18,7 @@ const Cryptocurrencies = ({ simplified }) => {
 
         const filteredData = cryptoList?.data?.coins.filter((coin) => coin?.name?.toLowerCase().includes(search.toLowerCase()))
         setCryptos(filteredData);
-        console.log(cryptos);
+        // console.log(cryptos);
     }, [cryptoList, search]);
 
 
@@ -36,7 +36,7 @@ const Cryptocurrencies = ({ simplified }) => {
                             <Link to={`/crypto/${currency.id}`}>
                                 <Card
                                     title={`${currency?.rank}, ${currency?.name} (${currency?.symbol})`}
-                                    extra={<img className="crypto-image" src={currency?.iconUrl} />}
+                                    extra={<img className="crypto-image" src={currency?.iconUrl} alt="crypto" />}
                                     hoverable
 
                                 >

@@ -19,8 +19,6 @@ const News = ({ simplified }) => {
     if (isFetching) return <Loader />;
 
 
-
-    console.log(news)
     return (
         <Row gutter={[24, 24]}>
             {!simplified && (
@@ -43,7 +41,7 @@ const News = ({ simplified }) => {
                 </Col>
             )}
             {news?.value?.map((news, i) => {
-                return (<Col xs={24} sm={12} lg={8} key={isFetching}>
+                return (<Col xs={24} sm={12} lg={8} key={i}>
                     <Card
                         loading={isFetching}
                         hoverable
