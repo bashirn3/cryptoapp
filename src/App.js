@@ -35,7 +35,7 @@ const App = () => {
                     </div>
                     <div className="footer">
                         <Typography.Title level={5} style={{ color: 'rgba(255, 255, 255, 0.67)', textAlign: 'center' }}>
-                            DotCoin <br />
+                            Crypto Stats <br />
                             All rights reserved <br />
                             <Space>
                                 <Link to="/">Home</Link>
